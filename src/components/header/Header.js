@@ -1,28 +1,22 @@
-import './Header.css';
+import css from './Header.module.css';
 
 function Header() {
   return (
-    <header>
-      <div className='container'>
-        <nav className='main-nav'>
-          <div>
-            <a href='#home' className='nav-link'>
-              HOME
-            </a>
-            <a href='#about' className='nav-link'>
-              ABOUT
-            </a>
-            <a href='#contacts' className='nav-link'>
-              CONTACTS
-            </a>
-          </div>
-          <div>
-            <a href='#search' className='nav-link'>
-              SEARCH
-            </a>
-          </div>
-        </nav>
-      </div>
+    <header className={css.header}>
+      <nav className='main-nav'>
+        <a className={css['nav-link']} href='#home'>
+          Home
+        </a>
+        <a className={css['nav-link']} href='#about'>
+          About
+        </a>
+        <a className={css['nav-link']} href='#contact'>
+          Contact
+        </a>
+      </nav>
+      <a className={css['nav-link']} href='#search'>
+        Search
+      </a>
     </header>
   );
 }
